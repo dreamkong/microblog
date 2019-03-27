@@ -7,6 +7,12 @@
     {% else %}
         <title>Welcome to Microblog</title>
     {% endif %}
+    <style>
+        h1,p,td,tr {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
 <div>Microblog:
@@ -14,6 +20,7 @@
     {% if current_user.is_anonymous %}
         <a href="{{ url_for('login') }}">Login</a>
     {% else %}
+        <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
         <a href="{{ url_for('logout') }}">Logout</a>
     {% endif %}
 </div>
