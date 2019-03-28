@@ -8,4 +8,4 @@ def make_shell_context():
 
 
 if __name__ == '__main__':
-    app.run(port=5001, debug=False)
+    app.run(port=5001, debug=True)
